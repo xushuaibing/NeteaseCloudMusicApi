@@ -1,4 +1,6 @@
-FROM node:lts-alpine
+# FROM aarch64/node:4.6-slim
+ARG NODE_VERSION=8
+FROM  arm64v8/node:${NODE_VERSION}-alpine
 
 WORKDIR /app
 COPY . /app
